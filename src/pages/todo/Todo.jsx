@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import { v4 as uuid } from 'uuid';
 import { useSelector, useDispatch } from "react-redux";
 import { appSelector, appActions } from "../../redux/appRedux";
@@ -68,7 +68,7 @@ const Todo = () => {
                                 <Stack key={t.id} sx={{justifyContent:'space-between'}}
                                 direction='row'>
                                 <Grid item md={1}>                  
-                                    <Checkbox onChange={ e => handleChecked(e,t.id)} />
+                                    <Checkbox checked={t.completed} onChange={ e => handleChecked(e,t.id)} />
                                 </Grid>
                                 <Grid item md={9} sx={{pt: 1}}>                 
                                     <Typography sx={{fontSize:18,
