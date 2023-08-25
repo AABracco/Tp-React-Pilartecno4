@@ -1,12 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { CssBaseline } from "@mui/material";
+import Routes from "./pages/routes";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <CssBaseline>
+    <BrowserRouter>
+    <Routes />
+    </BrowserRouter>
+    </CssBaseline>
   );
 }
-
 export default App;
